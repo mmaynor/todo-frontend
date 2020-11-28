@@ -1,0 +1,12 @@
+<h1>ToDo Note Taker Application</h1>
+<div class="container">
+    Welcome {{username}}. You can manage your ToDo List <a routerLink="/todo" >here</a>
+</div>
+<div class="container">
+    Click here to get a customized welcome message
+    <button (click)="getWelcomeMessageWithParameter()">Get Welcome Message</button>
+</div>
+<div class="container" *ngIf="welcomeMessageFromService">
+    <h2>Your Customized Welcome Message</h2>
+    {{welcomeMessageFromService}}
+</div>
